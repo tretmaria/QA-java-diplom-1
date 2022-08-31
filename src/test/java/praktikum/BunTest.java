@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BunTest {
     Bun bun = new Bun("black bun", 200);
+    int delta = 0;
 
     @Test
     public void getBunNameTest() {
@@ -18,6 +19,6 @@ public class BunTest {
     public void getBunPriceTest() {
         float expectedResult = 200;
         float actualResult = bun.getPrice();
-        assertEquals("Цена булочки неверно указана", expectedResult, actualResult, 0);
+        assertEquals("Цена булочки неверно указана", expectedResult, actualResult, delta);
     }
 }
