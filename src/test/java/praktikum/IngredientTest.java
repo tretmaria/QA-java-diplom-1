@@ -7,8 +7,8 @@ import static praktikum.IngredientType.SAUCE;
 
 
 public class IngredientTest {
-    int delta = 0;
-    Ingredient ingredient = new Ingredient(SAUCE, "hot sauce", 100);
+    private static final int DELTA = 0;
+    Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "hot sauce", 100);
     @Test
     public void getIngredientTypeTest(){
         IngredientType expectedResult = SAUCE;
@@ -18,7 +18,7 @@ public class IngredientTest {
     public void getIngredientPriceTest() {
         float expectedResult = 100;
         float actualResult = ingredient.getPrice();
-        assertEquals("Цена ингредиента неправильная", expectedResult, actualResult, delta);
+        assertEquals("Цена ингредиента неправильная", expectedResult, actualResult, DELTA);
     }
 
     @Test

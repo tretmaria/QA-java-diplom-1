@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerMockTest {
-    int delta = 0;
+    private static final int DELTA = 0;
     @Mock
     Bun bun;
     @Mock
@@ -62,7 +62,7 @@ public class BurgerMockTest {
         Mockito.when(bun.getPrice()).thenReturn(200F);
         Mockito.when(ingredient.getPrice()).thenReturn(200F);
         float expectedPrice = bun.getPrice() * 2 + ingredient.getPrice();
-        assertEquals(expectedPrice, burger.getPrice(), delta);
+        assertEquals(expectedPrice, burger.getPrice(), DELTA);
     }
 
     @Test
@@ -75,7 +75,6 @@ public class BurgerMockTest {
         Mockito.when(ingredient.getType()).thenReturn(IngredientType.SAUCE);
         Mockito.when(ingredient.getName()).thenReturn("sour cream");
         Mockito.when(ingredient.getPrice()).thenReturn(200F);
-        String expectedBurger = "(==== black bun ====)\n" + "= sauce sour cream =\n" + "(==== black bun ====)\n" + "Price: 400.000000\n";
         assertThat(burger.getReceipt(), containsString("sauce sour cream"));
         assertThat(burger.getReceipt(), anyOf(endsWith("Price: 400.000000"), startsWith("(==== black bun ====)")));
     }
