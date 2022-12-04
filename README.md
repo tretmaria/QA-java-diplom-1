@@ -1,12 +1,13 @@
 # QA-java-diplom-1
-Описание: нужно протестировать программу, которая помогает заказать бургер в Stellar Burgers. Тебе предстоит покрыть её юнит-тестами.
 
-Инструкции:
+Description: You need to test a program that helps you order a burger at Stellar Burgers. You need to write unit tests.
 
-Склонируй репозиторий с заготовкой кода - https://github.com/yandex-praktikum/QA-java-diplom-1.
+Instructions:
 
-Подключи библиотеки: Jacoco, Mockito, JUnit 4.
+Clone the repository - https://github.com/yandex-praktikum/QA-java-diplom-1.
 
-Покрой тестами классы Bun, Burger, Ingredient, IngredientType. Используй моки, стабы и параметризацию там, где нужно.
+Connect libraries: Jacoco, Mockito, JUnit 4.
 
-Процент покрытия должен быть не ниже 70%.
+Cover Bun, Burger, Ingredient, IngredientType classes with tests. Use mocks, stubs, and parametrization where needed.
+
+The coverage percentage should be at least 70%.
